@@ -147,7 +147,7 @@ function calculate(num1 = document.getElementById("numberone").value, num2 = doc
     }
     else if(document.getElementById("subtraction").value) 
     {
-        subtractNumbers(num1, num2);
+        subtractNumbers(num1, num2); 
     }
     else if (document.getElementById("multiplication").value)
     {
