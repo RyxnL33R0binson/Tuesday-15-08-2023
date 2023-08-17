@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="js-day2.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Basic Calculator</h2>
+    <form class="container calculator">
+        <input type="text" id="numberone">
+        <p style="display: inline; color:snow;"> + </p>
+        <input type="text" id="numbertwo" />
+
+        <select>
+            <option value="+" id="addition">Addition</option>
+            <option value="-" id ="subtraction">Subtraction</option>
+            <option value="*" id ="multiplication">Multiplication</option>
+            <option value="/" id ="division">Division</option>
+        </select>
+
+
+        <input type="button" id="sumbtn" value="Sum UP!" onclick="calculate()" />
+        <input type="text" id="result" disabled /> <!-- JS will create a value and insert the result -->
+
+    </form>
+
+    
+</body>
+</html>
