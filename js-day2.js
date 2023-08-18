@@ -176,4 +176,113 @@ function divideNumbers(num1, num2)
     console.log(parseInt(num1) / parseInt(num2));
 }
 
-let customersAge = prompt("How old are you(numeric value)", "");
+
+function calculate_age(dob) 
+{ 
+    let diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+function itemsForAge()
+{
+    let customerAge = prompt("Please enter you date of birth:", "");
+
+
+    if(customerAge => 21)
+    {
+        allItems(customersAge);
+    }
+
+    else if (customerAge == 16 || customerAge == 17)
+    {
+        itemsFor16(customersAge);
+    }
+    else if (customerAge >= 11 && customerAge <=15)
+    {
+        itemsFor11(customersAge);
+    }
+    else
+    {
+        itemsForChildren(customersAge);
+    }
+}
+
+function allItems()
+{
+
+}
+
+//******************************Loops********************/
+function reverseString(word)
+{
+    let temp = "";
+    for(let i = word.length - 1; i >= 0; i--) 
+    {
+        temp = temp + word[i]; 
+        console.log(temp);
+    }
+}
+
+function forinLoops()
+{
+    const coloursList = ["Blue", "Purple", "Red", "Pink", "Yellow", "Green"];
+    let temp = "";
+    for(let color in coloursList)
+    {
+        console.log(colour);
+        temp = temp + coloursList[colors] + " ";
+        console.log(temp);
+    };
+}
+
+function forWhileLoops()
+{
+    while(i < 23)
+    {
+        console.log("3 multiplied by " + i + " is " + i*3 + "\n");
+        i++;
+    }
+};
+
+function fibonacciSequence()
+{
+    let a = 0;
+    let b = 1;
+    let c = 1;
+    let userInput = 10
+        
+    for(let i = 0; i <= userInput; i++)
+    {
+        a = b;
+        b = c;
+        c = a + b;
+        
+        console.log(a + " ");
+    }
+}
+
+function stringContainsLetter()
+{
+    let string1 = "Hello";
+    let string2 = "world";
+
+    console.log(string1.indexOf("lo"));
+    console.log(string2.indexOf("or"));
+}
+
+function getStringIsInArray(wrd)
+{
+    let ss = "";
+    let cars = ["Saab", "Volvo", "BMW", "Volkswagen", "Audi", "Ford"];
+    let userInput = wrd.toLowerCase();
+    
+    for (let i = 0; i < cars[i].length; i++) 
+    {
+        if (sentenceAsArray[i].equals(input)) {
+            ss = "The word " + input + " is in the position: " + i;
+        }
+    }
+    return ss; 
+}
